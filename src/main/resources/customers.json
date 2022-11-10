@@ -1,0 +1,42 @@
+[
+  {
+    "firstName": "Ivan",
+    "lastName": "Ivanov",
+    "status": "silver",
+    "numberOfPurchases": "100",
+    "numberOfReturns": "9",
+    "phoneNumber": "+7-999-888-77-66"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Bin",
+    "status": "gold",
+    "numberOfPurchases": "501",
+    "numberOfReturns": "11",
+    "phoneNumber": "+4-203-332-27-77"
+  },
+  {
+    "firstName": "Jack",
+    "lastName": "Bin",
+    "status": "gold",
+    "numberOfPurchases": "500",
+    "numberOfReturns": "100",
+    "phoneNumber": "+2-203-332-27-66"
+  },
+  {
+    "firstName": "Jennifer",
+    "lastName": "Aniston",
+    "status": "platinum",
+    "numberOfPurchases": "1000",
+    "numberOfReturns": "100",
+    "phoneNumber": "+1-202-332-27-33"
+  },
+  {
+    "firstName": "Galina",
+    "lastName": "Petrovovna",
+    "status": "gold",
+    "numberOfPurchases": "50",
+    "numberOfReturns": "0",
+    "phoneNumber": "+7-111-222-33-44"
+  }
+]
