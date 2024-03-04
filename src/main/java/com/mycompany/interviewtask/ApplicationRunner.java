@@ -1,27 +1,26 @@
 package com.mycompany.interviewtask;
 
-import com.mycompany.interviewtask.impl.SaveCustomers;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mycompany.interviewtask.service.CustomerServiceImpl;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.PostConstruct;
-
+/**
+ * Думаю что более правильно использовать ивенты, но ее как и постконстракт лучше в данном случае отключать перед тестами,
+ * особенно интеграционынми.
+ *
+ */
 @Repository
-@SuppressWarnings("all")
+@RequiredArgsConstructor
 public class ApplicationRunner {
 
-    SaveCustomers saveCustomers;
+    private final CustomerServiceImpl saveCustomers;
 
-
-    @PostConstruct
+    @EventListener(ApplicationReadyEvent.class)
     public void start() {
         System.out.println("Start processing...");
-        saveCustomers.save();
+        saveCustomers.saveCustomers();
         System.out.println("Finished");
-    }
-
-    @Autowired
-    public void setSaveCustomers(SaveCustomers saveCustomers) {
-        this.saveCustomers = saveCustomers;
     }
 }
